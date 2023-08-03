@@ -1,6 +1,6 @@
 'use client'
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-
 const Card = () => {
     const [data, setData] = useState([]);
 
@@ -30,7 +30,7 @@ const Card = () => {
                     </tr>
                     <tr>
                         <th>Title</th>
-                        {/* <th>Images</th> */}
+                        <th>Images</th>
 
                     </tr>
                 </thead>
@@ -38,6 +38,7 @@ const Card = () => {
                     {data.map((user) => (
                         <tr key={user.id}>
                             <td>{user.title}</td>
+                            <td> <Image src={user.thumbnail} height={50} width={50} alt="image" /> </td>
                         </tr>
                     ))}
                 </tbody>

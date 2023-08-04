@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Image from 'next/image';
-import Keenslider from './keenslider';
+
 
 const Gallery = () => {
-  // An array of image URLs and captions for each image
   const images = [
     {
       src: 'https://source.unsplash.com/random',
@@ -82,7 +81,6 @@ const Gallery = () => {
         )}
       </div>
 
-      <Keenslider />
     </>
   );
 };

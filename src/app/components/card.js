@@ -7,6 +7,8 @@ const Card = () => {
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [loading, setLoading] = useState(true); // Add a loading state
+
 
     useEffect(() => {
         fetchData();
@@ -25,14 +27,19 @@ const Card = () => {
             const response = await fetch('https://dummyjson.com/products');
             const data = await response.json();
             setData(data.products);
+            setLoading(false); // Set loading to false even in case of an error
         } catch (error) {
             console.error('Error fetching data:', error);
+            setLoading(false); // Set loading to false even in case of an error
         }
     };
 
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
     };
+    if (loading) {
+        return <div class="loader_globle"></div>;
+    }
 
     return (
         <>

@@ -38,7 +38,7 @@ const Card = () => {
         setSearchTerm(event.target.value);
     };
     if (loading) {
-        return <div class="loader_globle"></div>;
+        return <div className="loader_globle"></div>;
     }
 
     return (

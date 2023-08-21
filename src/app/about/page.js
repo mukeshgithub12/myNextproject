@@ -1,5 +1,9 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
+import toast, { Toaster } from 'react-hot-toast';
+const notify = () => toast.success('Here is your toast.');
+
 const About = () => {
     return (
         <>
@@ -27,9 +31,12 @@ const About = () => {
                             <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                                 Button
                             </button>
-                            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                                Button
+                            <button onClick={notify} className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                                Notify
                             </button>
+                            <Toaster
+                                position="top-right"
+                            />
                         </div>
                     </div>
                 </div>

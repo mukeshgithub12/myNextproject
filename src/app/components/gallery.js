@@ -8,38 +8,52 @@ import Image from 'next/image';
 const Gallery = () => {
   const images = [
     {
-      src: 'https://source.unsplash.com/random',
+      src: 'https://source.unsplash.com/random/800x700?flowers',
       caption: 'Image 1',
     },
     {
-      src: 'https://source.unsplash.com/user/wsanter',
+      src: 'https://source.unsplash.com/random/800x700?water',
       caption: 'Image 2',
     },
     {
-      src: 'https://source.unsplash.com/random/900×700/?fruit',
+      src: 'https://source.unsplash.com/random/800x700?fruit',
       caption: 'Image 3',
     },
     {
-      src: 'https://source.unsplash.com/random/?city,night',
+      src: 'https://source.unsplash.com/random/800x700?city,night',
       caption: 'Image 4',
     },
     {
-      src: 'https://source.unsplash.com/random/?nature',
+      src: 'https://source.unsplash.com/random/800x700?toy',
       caption: 'Image 5',
     },
     {
-      src: 'https://source.unsplash.com/random/?wild',
+      src: 'https://source.unsplash.com/random/800x700?wild',
       caption: 'Image 6',
     },
     {
-      src: 'https://source.unsplash.com/random/?home',
-      caption: 'Image 7',
-    },
-    {
-      src: 'https://source.unsplash.com/random/?science',
+      src: 'https://source.unsplash.com/random/800x700?home',
       caption: 'Image 7',
     },
     // Add more images as needed
+    {
+      src: 'https://source.unsplash.com/random/800x700?style',
+      caption: 'Image 8',
+    },
+    {
+      src: 'https://source.unsplash.com/random/800x700?coding',
+      caption: 'Image 9',
+    },
+    {
+      src: 'https://source.unsplash.com/random/800x700?phone',
+      caption: 'Image 10',
+    },{
+      src: 'https://source.unsplash.com/random/800x700?bag',
+      caption: 'Image 10',
+    },{
+      src: 'https://source.unsplash.com/random/800x700?mountain',
+      caption: 'Image 10',
+    },
   ];
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -80,9 +94,8 @@ const Gallery = () => {
           />
         )}
       </div>
-
     </>
   );
-};
+}
 
 export default Gallery;
